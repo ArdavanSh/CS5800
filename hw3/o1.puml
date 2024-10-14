@@ -1,0 +1,28 @@
+@startuml
+object "<u>titanic:Ship</u>" as ts {
+    shipName = "Titanic"
+    yearBuilt = "March 31st, 1909"
+}
+
+object "<u>ship_mvGemini:Ship</u>" as smg {
+    shipName = "MV Gemini"
+    yearBuilt = "May 30th, 1991"
+}
+
+object "<u>mvGemini:CruiseShip</u>" as mg {
+    maxNumberPassengers = 100
+}
+
+object "<u>ship_everGiven:Ship</u>" as seg {
+    shipName = "Ever Given"
+    yearBuilt = "September 25th, 2018"
+}
+
+object "<u>everGiven:CargoShip</u>" as eg {
+    cargoCapacityInTonnage = 220940
+}
+
+smg <|-- mg
+seg <|-- eg
+@enduml
+
